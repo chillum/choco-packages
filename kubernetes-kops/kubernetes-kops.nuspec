@@ -7,10 +7,9 @@
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>Vasily Korytov</owners>
 
-    <title>kubernetes-kops</title>
+    <title>Kubernetes Operations (kops)</title>
     <authors>The Kubernetes Authors</authors>
     <projectUrl>https://github.com/kubernetes/kops</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/kubernetes/kops/master/docs/img/logo.jpg</iconUrl>
     <copyright>2019 The Kubernetes Authors</copyright>
     <licenseUrl>https://github.com/mozilla/sops/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
