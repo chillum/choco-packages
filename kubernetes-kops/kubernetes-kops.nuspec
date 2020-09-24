@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>kubernetes-kops</id>
-    <version>1.18.0</version>
+    <version>1.17.2</version>
     <packageSourceUrl>https://github.com/chillum/choco-packages</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>Vasily Korytov</owners>
@@ -11,7 +11,7 @@
     <authors>The Kubernetes Authors</authors>
     <projectUrl>https://github.com/kubernetes/kops</projectUrl>
     <copyright>2019 The Kubernetes Authors</copyright>
-    <licenseUrl>https://github.com/mozilla/sops/blob/master/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/kubernetes/kops/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/kubernetes/kops</projectSourceUrl>
     <docsUrl>https://github.com/kubernetes/kops/blob/master/README.md</docsUrl>
