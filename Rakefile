@@ -9,7 +9,7 @@ def pack(list)
   end
 end
 
-pack %w[httpstress kubernetes-kops sops yq]
+pack %w[httpstress kubernetes-kops kubernetes-helmfile sops yq]
 
 desc 'remove *.nupkg files'
 task :clean do
