@@ -28,7 +28,7 @@
         {
             "label": "checksum",
             "type": "shell",
-            "command": "$tmp = [System.IO.Path]::GetTempFileName(); Invoke-WebRequest -UseBasicParsing ${selectedText} -OutFile $tmp; Get-FileHash $tmp | Select Algorithm, Hash; rm $tmp",
+            "command": "$tmp = [System.IO.Path]::GetTempFileName(); curl.exe ${selectedText} -Lo $tmp; Get-FileHash $tmp |select Algorithm, Hash; rm $tmp",
             "problemMatcher": []
         }
     ]
