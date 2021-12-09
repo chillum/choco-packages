@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>loki-logcli</id>
+    <version>2.4.1</version>
+    <packageSourceUrl>https://github.com/chillum/choco-packages</packageSourceUrl>
+    <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
+    <owners>Vasily Korytov</owners>
+
+    <title>logcli: Loki CLI interface</title>
+    <authors>Grafana Labs</authors>
+    <projectUrl>https://grafana.com/oss/loki/</projectUrl>
+    <copyright>2018- Grafana Labs</copyright>
+    <licenseUrl>https://github.com/grafana/loki/blob/main/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/grafana/loki</projectSourceUrl>
+    <docsUrl>https://grafana.com/docs/loki/latest/</docsUrl>
+    <bugTrackerUrl>https://github.com/grafana/loki/issues</bugTrackerUrl>
+    <tags>kubernetes logs grafana loki logcli</tags>
+    <summary>CLI client for the Grafana Loki logging stack</summary>
+    <description>
+      Grafana Loki is a log aggregation system inspired by Prometheus.
+      This package provides the logcli utility for querying a Loki installation.
+    </description>
+    <releaseNotes>https://github.com/grafana/loki/releases</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
