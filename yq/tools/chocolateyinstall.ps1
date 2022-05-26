@@ -2,11 +2,11 @@ $toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
     PackageName    = 'yq'
-    Url            = 'https://github.com/mikefarah/yq/releases/download/v4.21.1/yq_windows_386.exe'
-    Checksum       = '16B90F8BBAF1B7F8C31AF3944A33C6F364668978FE6155F07071457DE8BF4277'
+    Url            = 'https://github.com/mikefarah/yq/releases/download/v4.25.1/yq_windows_386.exe'
+    Checksum       = '39546D622539F31306588F23B030989DE321EAEA27144492D2F7CD3A2A66195E'
     ChecksumType   = 'sha256'
-    Url64bit       = 'https://github.com/mikefarah/yq/releases/download/v4.21.1/yq_windows_amd64.exe'
-    Checksum64     = '01ED6F93943900E5FA282F9362271596DF77DB5E8B8319FC9CCE6947D80EBD83'
+    Url64bit       = 'https://github.com/mikefarah/yq/releases/download/v4.25.1/yq_windows_amd64.exe'
+    Checksum64     = 'F26BF0F977163524FE181A597CB27E1798D326A4E85AFDD2BA176FFD4C3579B6'
     ChecksumType64 = 'sha256'
     FileFullPath   = "$toolsDir\yq.exe"
 }
