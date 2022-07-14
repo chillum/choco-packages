@@ -2,13 +2,16 @@ $toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
     PackageName    = 'kubernetes-helmfile'
-    Url            = 'https://github.com/roboll/helmfile/releases/download/v0.144.0/helmfile_windows_386.exe'
-    Checksum       = '3B30897FB08B49E023B134119AAFD9D9777CCD5586B3B565805EC8FBD8CBEDF8'
+    Url            = 'https://github.com/helmfile/helmfile/releases/download/v0.145.2/helmfile_0.145.2_windows_386.tar.gz'
+    Checksum       = '6785ED78608122B608C14C81598BA352906C93FC38566B47CC93AB37482D8186'
     ChecksumType   = 'sha256'
-    Url64bit       = 'https://github.com/roboll/helmfile/releases/download/v0.144.0/helmfile_windows_amd64.exe'
-    Checksum64     = '97F0E617977C5518CC92D9982C894ECCAEB4C64FA9AE9577E606D2780E66F10B'
+    Url64bit       = 'https://github.com/helmfile/helmfile/releases/download/v0.145.2/helmfile_0.145.2_windows_amd64.tar.gz'
+    Checksum64     = 'ED025A18C8A8B3AB6FAC18D8A080B3F3F7DBDB090D99EA8B0854043BD27B3E7D'
     ChecksumType64 = 'sha256'
-    FileFullPath   = "$toolsDir\helmfile.exe"
+    UnzipLocation = "$toolsDir"
 }
 
-Get-ChocolateyWebFile @packageArgs
+Install-ChocolateyZipPackage @packageArgs
+$tarFile = Get-ChildItem -File -Path $toolsDir -Filter *.tar
+Get-ChocolateyUnzip -fileFullPath $tarFile.FullName -destination $toolsDir
+rm $tarFile.FullName
