@@ -2,8 +2,8 @@ $toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
     PackageName    = 'kubernetes-kops'
-    Url64bit       = 'https://github.com/kubernetes/kops/releases/download/v1.23.3/kops-windows-amd64'
-    Checksum64     = '9F451BC22440544D49F632F58DA2FB4CF652CE7C908FE6D9DE15533FE109E053'
+    Url64bit       = 'https://github.com/kubernetes/kops/releases/download/v1.24.0/kops-windows-amd64'
+    Checksum64     = '00EE0219EF5517DD32826A3887E95D003001625B7EAD6EE5FA1D3696338DDF8A'
     ChecksumType64 = 'sha256'
     FileFullPath   = "$toolsDir\kops.exe"
 }
