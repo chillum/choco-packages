@@ -2,11 +2,11 @@ $toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
     PackageName    = 'kubernetes-helmfile'
-    Url            = 'https://github.com/helmfile/helmfile/releases/download/v0.148.1/helmfile_0.148.1_windows_386.tar.gz'
-    Checksum       = '96BD72F05426459C09F9D3E949CF6E3A142D2EFADCB680D6B43333D4D979A410'
+    Url            = 'https://github.com/helmfile/helmfile/releases/download/v0.149.0/helmfile_0.149.0_windows_386.tar.gz'
+    Checksum       = 'C57A221D74F1B1E9149CF192553A9709F1A0994A99D49A35110BC1D877D8C5A5'
     ChecksumType   = 'sha256'
-    Url64bit       = 'https://github.com/helmfile/helmfile/releases/download/v0.148.1/helmfile_0.148.1_windows_amd64.tar.gz'
-    Checksum64     = '23146C13DEBC5E62E2A6949AD231E190013906D31F7839F2A0DD0D8A9400A76E'
+    Url64bit       = 'https://github.com/helmfile/helmfile/releases/download/v0.149.0/helmfile_0.149.0_windows_amd64.tar.gz'
+    Checksum64     = '10FF21F56402E523C20230C5990CA2C6F61EC81EFCBB5C13BB93C4A88B5CE117'
     ChecksumType64 = 'sha256'
     UnzipLocation = "$toolsDir"
 }
