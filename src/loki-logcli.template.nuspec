@@ -2,10 +2,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>loki-logcli</id>
-    <version>2.8.6</version>
-    <packageSourceUrl>https://github.com/chillum/choco-packages</packageSourceUrl>
+    <version>%%VERSION%%</version>
+    <packageSourceUrl>https://github.com/n0y/chocolatey-loki-logcli</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
-    <owners>Vasily Korytov</owners>
+    <owners>Deutsche Bahn Systel AG</owners>
 
     <title>logcli: Loki CLI interface</title>
     <authors>Grafana Labs</authors>

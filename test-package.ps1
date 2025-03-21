@@ -1,0 +1,1 @@
+logcli --version

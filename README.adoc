@@ -1,0 +1,28 @@
+= Loki LogCLI - Chocolatey Packaging
+
+This repository packages the LogCLI from the
+https://grafana.com/docs/loki/latest/[Grafana Loki]
+tool as
+https://community.chocolatey.org/packages[Chocolatey Package].
+
+== Installation
+
+[source]
+----
+choco install loki-logcli
+----
+
+== Notes
+
+This is only the Chocolatey packaging, not the package itself.
+
+== Authors
+
+* Bertram Fey <bertram.fey@deutschebahn.com>
+* based on the work of https://github.com/chillum[Vasyl Korytov]
+* and learning how to automate things from
+  https://www.dolthub.com/blog/2021-10-13-how-to-publish-winget-chocolatey-packages-with-github-actions/[Dustin Brown`s article].
+
+== License
+
+Under the link:LICENSE[Apache 2 License].

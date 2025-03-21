@@ -1,0 +1,31 @@
+name: test and pack package
+on:
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: windows-2022
+    defaults:
+      run:
+        shell: powershell
+    steps:
+      - uses: actions/checkout@v4
+      - name: Chocolately version
+        run: choco --version
+      - name: Install AU
+        run: choco install au
+      - name: Build release with appropriate version
+        run: ./build-packagespec.ps1
+      - name: Test Package Installer
+        working-directory: ./target
+        run: Test-Package $Install
+      - name: Test is package is installed now
+        run: ./test-package.ps1
+      - name: Build Package
+        working-directory: ./target
+        run: choco pack
+      - name: upload built binaries
+        uses: actions/upload-artifact@v4
+        with:
+          path: target
+          if-no-files-found: error

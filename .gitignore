@@ -1,1 +1,4 @@
 *.nupkg
+/.idea/
+/target/
+/archive/

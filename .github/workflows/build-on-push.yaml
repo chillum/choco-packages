@@ -1,0 +1,31 @@
+name: Build and Test the package on branch push
+
+on:
+  push:
+    branches: ['**']
+
+jobs:
+  build:
+    uses: ./.github/workflows/part-package-and-test.yaml
+
+  check_tag_exists:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+      - name: load current upstream version
+        id: load_version
+        run: cp versions.properties "$GITHUB_OUTPUT"
+      - uses: mukunku/tag-exists-action@v1.6.0
+        id: check-tag
+        with:
+          tag: '${{steps.load_version.outputs.UPSTREAM_VERSION}}'
+    outputs:
+      tag_exists: ${{steps.check-tag.outputs.exists}}
+
+  create-tag-and-release:
+    needs: check_tag_exists
+    if: ${{ (needs.check_tag_exists.outputs.tag_exists == 'false') && github.ref == 'refs/heads/master' }}
+    secrets: inherit
+    uses: ./.github/workflows/part-release-tag.yaml

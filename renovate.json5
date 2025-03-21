@@ -1,0 +1,19 @@
+{
+  extends: [
+    "config:base",
+    ":dependencyDashboard"
+  ],
+  automerge: true,
+  customManagers: [
+    {
+      customType: "regex",
+      fileMatch: [
+        "versions.properties"
+      ],
+      matchStrings: [
+        "# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)?( extractVersion=(?<extractVersion>.*?))?( versioning=(?<versioning>.*?))?( registryUrl=(?<registryUrl>.*?))?\\s.*?_VERSION=(?<currentValue>.*)\\s"
+      ],
+      versioningTemplate: "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+    }
+  ]
+}
